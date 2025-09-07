@@ -60,9 +60,8 @@ QUnit.module('Тестируем функцию deepClone', () => {
     });
 
     QUnit.test('Копирование объекта с функциями', function (assert) {
-        const testFunc = function () { return 'test'; };
         const original = {
-            method: testFunc,
+            method: () => 'test',
             data: { value: 42 }
         };
 
